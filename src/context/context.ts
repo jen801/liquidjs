@@ -61,6 +61,9 @@ export class Context {
    * @deprecated use `_get()` instead
    */
   public get (paths: PropertyKey[]): unknown {
+    return this.getSync(paths)
+  }
+  public getSync (paths: PropertyKey[]): unknown {
     return toValueSync(this._get(paths))
   }
   public * _get (paths: PropertyKey[]): IterableIterator<unknown> {

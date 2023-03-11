@@ -1,7 +1,7 @@
 import { assert, isArray, isString, isFunction } from './util'
 import { LRU, LiquidCache } from './cache'
 import { FS, LookupType } from './fs'
-import * as fs from './fs/node'
+import * as fs from './fs/fs-impl'
 import { defaultOperators, Operators } from './render'
 import { json } from './filters/misc'
 import { escape } from './filters/html'
